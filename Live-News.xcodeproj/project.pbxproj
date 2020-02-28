@@ -13,6 +13,11 @@
 		005020EE24094D82004BE7A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 005020ED24094D82004BE7A1 /* Assets.xcassets */; };
 		005020F124094D82004BE7A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 005020F024094D82004BE7A1 /* Preview Assets.xcassets */; };
 		005020F424094D82004BE7A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005020F224094D82004BE7A1 /* LaunchScreen.storyboard */; };
+		005020FF24094E67004BE7A1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005020FE24094E67004BE7A1 /* NetworkManager.swift */; };
+		0050210124094E8C004BE7A1 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050210024094E8C004BE7A1 /* PostData.swift */; };
+		0050210324094F02004BE7A1 /* DetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050210224094F02004BE7A1 /* DetailedView.swift */; };
+		0050210524094F1C004BE7A1 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050210424094F1C004BE7A1 /* WebView.swift */; };
+		0050210724094FFA004BE7A1 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050210624094FFA004BE7A1 /* ApiKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,12 @@
 		005020F024094D82004BE7A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		005020F324094D82004BE7A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		005020F524094D82004BE7A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		005020FE24094E67004BE7A1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0050210024094E8C004BE7A1 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		0050210224094F02004BE7A1 /* DetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedView.swift; sourceTree = "<group>"; };
+		0050210424094F1C004BE7A1 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		0050210624094FFA004BE7A1 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
+		0050210824095B2E004BE7A1 /* Live-News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Live-News.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +67,13 @@
 		005020E624094D82004BE7A1 /* Live-News */ = {
 			isa = PBXGroup;
 			children = (
+				0050210824095B2E004BE7A1 /* Live-News.entitlements */,
 				005020E724094D82004BE7A1 /* AppDelegate.swift */,
 				005020E924094D82004BE7A1 /* SceneDelegate.swift */,
-				005020EB24094D82004BE7A1 /* ContentView.swift */,
+				005020FB24094DD9004BE7A1 /* Model */,
+				005020FC24094DE3004BE7A1 /* View */,
 				005020ED24094D82004BE7A1 /* Assets.xcassets */,
+				0050210624094FFA004BE7A1 /* ApiKey.swift */,
 				005020F224094D82004BE7A1 /* LaunchScreen.storyboard */,
 				005020F524094D82004BE7A1 /* Info.plist */,
 				005020EF24094D82004BE7A1 /* Preview Content */,
@@ -73,6 +87,25 @@
 				005020F024094D82004BE7A1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		005020FB24094DD9004BE7A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				005020FE24094E67004BE7A1 /* NetworkManager.swift */,
+				0050210024094E8C004BE7A1 /* PostData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		005020FC24094DE3004BE7A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				005020EB24094D82004BE7A1 /* ContentView.swift */,
+				0050210224094F02004BE7A1 /* DetailedView.swift */,
+				0050210424094F1C004BE7A1 /* WebView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0050210124094E8C004BE7A1 /* PostData.swift in Sources */,
+				005020FF24094E67004BE7A1 /* NetworkManager.swift in Sources */,
+				0050210724094FFA004BE7A1 /* ApiKey.swift in Sources */,
 				005020E824094D82004BE7A1 /* AppDelegate.swift in Sources */,
 				005020EA24094D82004BE7A1 /* SceneDelegate.swift in Sources */,
+				0050210324094F02004BE7A1 /* DetailedView.swift in Sources */,
 				005020EC24094D82004BE7A1 /* ContentView.swift in Sources */,
+				0050210524094F1C004BE7A1 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +322,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Live-News/Live-News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Live-News/Preview Content\"";
 				DEVELOPMENT_TEAM = 58HXQ9UR8R;
 				ENABLE_PREVIEWS = YES;
@@ -295,6 +335,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.denis.Live-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,7 +345,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Live-News/Live-News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Live-News/Preview Content\"";
 				DEVELOPMENT_TEAM = 58HXQ9UR8R;
 				ENABLE_PREVIEWS = YES;
@@ -315,6 +358,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.denis.Live-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
