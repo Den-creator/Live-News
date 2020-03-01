@@ -7,38 +7,31 @@
 //
 
 import SwiftUI
-import Foundation
 
 struct ContentView: View {
     
-    init() {
-        UINavigationBar.appearance().backgroundColor = UIColor(red: 193.0/255, green: 7.0/255, blue: 23.0/255, alpha: 1.0)
-
-        UINavigationBar.appearance().largeTitleTextAttributes = [
-                   .foregroundColor: UIColor.white,
-//                   .font : UIFont(name:"Helvetica", size: 40)!
-        ]
-                
-    }
     
     @ObservedObject var networkManager = NetworkManager()
+    
+    var selectedCategory: String?
     
     var body: some View {
         NavigationView {
             List(networkManager.posts) { post in
                 NavigationLink(destination: DetailView(url: post.url)) {
-                    HStack {
+                    VStack{
+                    Spacer(minLength: 10)
                         Text(post.title)
                         .font(.system(size: 18))
-                        .fontWeight(.medium)
-
+                        .fontWeight(.light)
+                    Spacer(minLength: 10)
                     }
                 }
+                .navigationBarTitle(Text("\(self.selectedCategory!)"), displayMode: .inline)
             }
-            .navigationBarTitle("Live-News")
-        
         }
         .onAppear {
+            self.networkManager.getCategory(self.selectedCategory)
             self.networkManager.fatchData()
         }
     }
